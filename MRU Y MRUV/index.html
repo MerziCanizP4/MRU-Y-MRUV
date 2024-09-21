@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Estudio de MRU y MRUV</title>
+</head>
+<body>
+    <header>
+        <h1>Estudio del MRU y MRUV</h1>
+    </header>
+    
+    <main>
+        <section class="mru">
+            <h2>Movimiento Rectilíneo Uniforme (MRU)</h2>
+            <img src="imagenes/MRU.jpg" alt="MRU 1">
+            <img src="imagenes/MRU_S.jpg" alt="MRU 2" style="width: 175px; height: auto;">
+
+            <h3>Fórmulas</h3>
+            <p>El movimiento rectilíneo uniforme (MRU) es aquel en el que un objeto se desplaza en línea recta con velocidad constante.</p>
+            <p>Fórmulas:</p>
+            <ul>
+                <li>Distancia: D = V * T</li>
+                <li>Velocidad: V = D / T</li>
+                <li>Tiempo: T = D / V</li>
+            </ul>
+
+            <h3>Calcular Distancia</h3>
+            <form id="mruFormDistancia" onsubmit="calcularMRU_Distancia(event)">
+                <label for="mruVelocity">Velocidad (m/s):</label>
+                <input type="number" id="mruVelocity" required>
+                <label for="mruTime">Tiempo (s):</label>
+                <input type="number" id="mruTime" required>
+                <button type="submit">Calcular Distancia</button>
+            </form>
+            <div id="resultado-mru-distancia"></div>
+
+            <h3>Calcular Velocidad</h3>
+            <form id="mruFormVelocidad" onsubmit="calcularMRU_Velocidad(event)">
+                <label for="mruDistance">Distancia (m):</label>
+                <input type="number" id="mruDistance" required>
+                <label for="mruTimeVel">Tiempo (s):</label>
+                <input type="number" id="mruTimeVel" required>
+                <button type="submit">Calcular Velocidad</button>
+            </form>
+            <div id="resultado-mru-velocidad"></div>
+
+            <h3>Calcular Tiempo</h3>
+            <form id="mruFormTiempo" onsubmit="calcularMRU_Tiempo(event)">
+                <label for="mruDistanceTi">Distancia (m):</label>
+                <input type="number" id="mruDistanceTi" required>
+                <label for="mruVelocityTi">Velocidad (m/s):</label>
+                <input type="number" id="mruVelocityTi" required>
+                <button type="submit">Calcular Tiempo</button>
+            </form>
+            <div id="resultado-mru-tiempo"></div>
+        </section>
+
+        <section class="mruv">
+            <h2>Movimiento Rectilíneo Uniformemente Variado (MRUV)</h2>
+            <img src="imagenes/MRUV.jpg" alt="MRUV 1">
+            <img src="imagenes/MRUV_S.jpg" alt="MRU 2" style="width: 175px; height: auto;">
+
+            <h3>Fórmulas</h3>
+            <p>El movimiento rectilíneo uniformemente variado (MRUV) es aquel en el que un objeto se desplaza con aceleración constante.</p>
+            <p>Fórmulas:</p>
+            <ul>
+                <li>Velocidad Final: vf = vo * t + at^2 / 2 </li>
+                <li>Distancia: d = vo + a * t</li>
+                <li>Aceleración: a = (vo + vf / 2) t</li>
+            </ul>
+
+            <h3>Calcular Aceleración</h3>
+            <form id="mruvFormAceleracion" onsubmit="calcularMRUV_Aceleracion(event)">
+                <label for="mruvVelInicial">Velocidad Inicial (m/s):</label>
+                <input type="number" id="mruvVelInicial" required>
+                <label for="mruvVelFinal">Velocidad Final (m/s):</label>
+                <input type="number" id="mruvVelFinal" required>
+                <label for="mruvTiempo">Tiempo (s):</label>
+                <input type="number" id="mruvTiempo" required>
+                <button type="submit">Calcular Aceleración</button>
+            </form>
+            <div id="resultado-mruv-aceleracion"></div>
+
+            <h3>Calcular Distancia Recorrida</h3>
+            <form id="mruvFormDistancia" onsubmit="calcularMRUV_Distancia(event)">
+                <label for="mruvVelInicialDist">Velocidad Inicial (m/s):</label>
+                <input type="number" id="mruvVelInicialDist" required>
+                <label for="mruvAceleracion">Aceleración (m/s²):</label>
+                <input type="number" id="mruvAceleracion" required>
+                <label for="mruvTiempoDist">Tiempo (s):</label>
+                <input type="number" id="mruvTiempoDist" required>
+                <button type="submit">Calcular Distancia</button>
+            </form>
+            <div id="resultado-mruv-distancia"></div>
+
+            <h3>Calcular Velocidad Final</h3>
+            <form id="mruvFormVelocidadFinal" onsubmit="calcularMRUV_VelocidadFinal(event)">
+                <label for="mruvVelInicialVel">Velocidad Inicial (m/s):</label>
+                <input type="number" id="mruvVelInicialVel" required>
+                <label for="mruvAceleracionVel">Aceleración (m/s²):</label>
+                <input type="number" id="mruvAceleracionVel" required>
+                <label for="mruvTiempoVel">Tiempo (s):</label>
+                <input type="number" id="mruvTiempoVel" required>
+                <button type="submit">Calcular Velocidad Final</button>
+            </form>
+            <div id="resultado-mruv-velocidad-final"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>MERZI CANIZ 2290-20-10279</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
